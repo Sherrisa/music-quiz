@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { quiz } from "../data.js";
+import { questions } from "../data.js";
 
 const page = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
@@ -13,7 +13,6 @@ const page = () => {
     wrongAnswers: 0,
   });
 
-  const { questions } = quiz;
   const { question, answers, correctAnswer } = questions[activeQuestion];
 
   const onAnswerSelected = (answer, idx) => {
